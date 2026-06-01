@@ -1,247 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AgeScape</title>
 
     <!-- favicon -->
-      <link rel="shortcut icon" href="images/agescape-logo_new-for-favicon.png" type="image/x-icon">
+
+    <link
+      rel="shortcut icon"
+      href="images/agescape-logo_new-for-favicon.png"
+      type="image/x-icon"
+    />
+
     <!-- favicon -->
 
+    <!-- google fonts -->
 
-    <!-- google fonds -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
 
-     <!-- google icon -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=volume_up" />
+    <!-- google fonts -->
+
+    <!-- bootstrap icon cdn -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- bootstrap icon cdn -->
+
+    <!-- css file -->
+    <link rel="stylesheet" href="agescape.css" />
+    <!-- css file -->
+  </head>
 
 
-
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-     <!-- google icon -->
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap" rel="stylesheet">
-    <!-- google fonds -->
-
-
-     <!-- font awesome cdn -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-     <!-- font awesome cdn -->
-
-     <!-- css file -->
-      <link rel="stylesheet" href="agescape.css">
-      <!-- css file -->
-
-</head>
-<body>
+  <body data-page="home">
 
  
+    <!-- audio overlay  -->
+
+    <div id="audioOverlay">
+      <button id="enterBtn">enter to AgeScape</button>
+    </div>
+ 
+    <!-- audio overlay  -->
+
+
+
 
     <!-- header start -->
 
-     <header>
+    <header>
 
 
-        <div class="top-bar">
+      <div class="top-bar">
+        <!-- mobile responsive hamburger for nav start -->
+
+        <div class="hamburger" id="hamburger">
+          <span id="span-1"></span>
+          <span id="span-2"></span>
+          <span id="span-3"></span>
+        </div>
+
+        <!-- mobile responsive hamburger for nav start -->
+
+
+
+        <!-- logo and name  -->
+        <div class="logo-and-name">
+          <img src="images/agescape-logo-new.png" alt="image is not load" />
+
+          <h3>AgeScape</h3>
+        </div>
+
+        <!-- logo and name  -->
 
         
-          <!-- mobile responsive hamburger for nav start -->
-
-
-           <div class="hamburger" id="hamburger">
-              <span id="span-1"></span>
-              <span id="span-2"></span>
-              <span id="span-3"></span>
-            </div>
+        <!-- bg audio on/off btn -->
+        <button class="audio-btn">
+          <i class="bi bi-volume-up"></i>
+          
+          <i class="bi bi-volume-mute slash"></i>
+        </button>
+        <!-- bg audio on/off btn -->
+      </div> 
         
-           <!-- mobile responsive hamburger for nav start -->
-            
+    </header>
+
+    <!-- header ends -->
 
 
-          <!-- logo and name  -->
-            <div class="logo-and-name">
-
-              <img src="images/agescape-logo-new.png" alt="image is not load">
 
 
-              <h3>AgeScape</h3>
+    <!-- nav start -->
+
+    <nav>
 
 
+      <!-- class="sidebar" id="sidebar" -->
+
+      <ul class="sidebar" id="sidebar">
+        <li><a href="#" class="home-nav-link">home</a></li>
+        <li><a href="#" class="timeline-nav-link">timeline</a></li>
+        <li><a href="#" class="civilizations-nav-link">civilizations</a></li>
+        <li><a href="#" class="stories-nav-link">stories</a></li>
+        <li><a href="#" class="about-nav-link">about</a></li>
+      </ul>
+
+
+      <!-- overlay -->
+      <div class="overlay" id="overlay"></div>
+      <!-- overlay -->
+
+
+      <!-- mobile responsive hamburger nav ends-->
+
+    </nav>
+
+    <!-- nav ends -->
+
+
+    
+    <!-- main starts -->
+    <main>
+     
+      
+
+
+
+      <!-- home-page banner -->
+      <div class="home-banner">
+        <img src="images/agescape-home-page-banner.jpg" alt="banner" />
+
+        <!-- hame-page banner text/button  -->
+
+        <div class="home-banner-text-button">
+          <h3>
+            explore the journey of
+            <br />
+
+            <span> humanity </span>
+          </h3>
+          
+          <p>explore the echoes of time</p>
+
+
+          <!-- banner button -->
+          <div class="banner-button">
+            <a href="#featured-headline" class="start-btn">start exploring ➡</a>
+          </div>
+          <!-- banner button -->
+        </div>
+        
+        
+        
+        
+        <!-- hame-page banner text/button  -->
+      </div>
+      <!-- home-page banner  end -->
+      
+      
+
+
+        <!-- featured stories headline start -->
+
+        <h2 id="featured-headline">featured stories</h2>
+
+        <!-- featured stories headline end -->
+
+
+
+
+        <!-- featured-stories start -->
+        <div class="featured-stories">
+
+         
+
+
+
+
+          <!-- card 1 start -->
+         <a href="#" target="_blank" class="featured-cards">
+          <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+
+          <h3>taj mahal</h3>
+          <p> 2000bc</p>
+
+          <p>title goes here abcd</p>
+         </a>
+          <!-- card 1 end -->
+
+          <!-- card 2 start -->
+          <a href="#" target="_blank" class="featured-cards">
+            <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+
+          <h3>taj mahal</h3>
+          <p> 2000bc</p>
+
+          <p>title goes here 1234567</p>
+          </a>
+          <!-- card 2 end -->
+
+          <!-- card 3 start -->
+          <a href="#" target="_blank" class="featured-cards">
+            <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+
+          <h3>taj mahal</h3>
+          <p> 2000bc</p>
+
+          <p>title goes here 123451234523</p>
+          </a>
+          <!-- card 3 end -->
+
+          <!-- card 4 start -->
+          <a href="#" target="_blank" class="featured-cards">
+            <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+
+          <h3>taj mahal</h3>
+          <p> 2000bc</p>
+
+          <p>title goes here diugbu</p>
+          </a>
+          <!-- card 4 end -->
+
+        </div>
+        <!-- featured-stories end -->
+
+
+
+
+
+       <!-- search container start-->
+        <div class="parent-search-container">
+     
+
+
+          <h2 id="search-headline">what do you want to explore?</h2>
+
+
+
+            <!-- label and input -->
+              <div class="search-container">
+
+                 <label for="search-input" class="search-btn">
+                   <i class="bi bi-search"></i>
+                 </label>
+    
+  
+                <!-- search input -->
+                   <input type="search" name="search" placeholder="search civilizations,empires,ect." id="search-input" />
+                <!-- search input -->
+
+             </div>
+            <!-- label and input -->
+
+            <!-- search result start -->
+            <div class="search-result">
+              <p>no match found</p>
             </div>
-           <!-- logo and name  -->
+            <!-- search result end -->
 
 
-            <label for="search-input" class="search-btn">
-            <i class="fa-brands fa-searchengin"></i>
-            </label>
+        </div> 
+        <!-- search container end-->
+
+
+
+
+        <!-- catagories section -->
+
+        <div class="categories">
+
+          <!-- headline -->
+           <h2 id="categories-headline">categories</h2>
+          <!-- headline -->
+
+
+             <!-- card 1  -->
+          <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+            <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+            </div>
+
+            <h3>wonders</h3>
+          </a>
+          <!-- card1  -->
+
+
+          <!-- card 2 -->
+          <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+              <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+              </div>
+
+            <h3>empires</h3>
+          </a>
+          <!-- card 2 -->
+          
+
+          <!-- card 3 -->
+          <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+              <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+              </div>
+
+            <h3>king & rulers</h3>
+          </a>
+          <!-- card 3 -->
+          
+
+          <!-- card 4 -->
+          <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+              <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+              </div>
+
+            <h3>world wars</h3>
+          </a>
+          <!-- card 4 -->
+          
+
+          <!-- card 5 -->
+          <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+              <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+              </div>
+
+            <h3>civilizations</h3>
+          </a>
+          <!-- card 5 -->
+
+
+           <!-- card 6 -->
+           <a href="" target="_blank" class="categories-card">
+
+            <div class="categories-img-wrapper">
+              <img src="images/agescape-home-page-banner.jpg" loading="lazy" alt="">
+              </div>
+
+            <h3>mysteries</h3>
+          </a>
+          <!-- card 6 -->
 
         </div>
 
 
-        
-
-
-        <!-- search input -->
-
-        <input type="search" name="search" id="search-input">
-
-        <!-- search input -->
+        <!-- catagories section -->
 
 
 
 
 
-     </header>
 
-     <!-- header ends -->
+
+
+    </main>
+
+    <!-- main ends  -->
+
+
+
+
     
-  
-
-      
-
-     <!-- nav start -->
-
-
-
-     <nav>
-                
-        <!-- class="sidebar" id="sidebar" -->
-                
-         <ul class="sidebar" id="sidebar">
-            <li><a href="#" class="home-nav-link">home</a></li>
-            <li><a href="#" class="timeline-nav-link">timeline</a></li>
-            <li><a href="#" class="civilizations-nav-link">civilizations</a></li>
-            <li><a href="#" class="stories-nav-link">stories</a></li>
-            <li><a href="#" class="about-nav-link">about</a></li>
-         </ul>
-                        
-
-                     <!-- overlay -->
-                        <div class="overlay" id="overlay"></div>
-                     <!-- overlay -->
-                     
-                    
-                        
-                <!-- mobile responsive hamburger nav ends-->
-
-
-</nav>
-    
-     <!-- nav ends -->
-
-
-
-
-
-     <!-- main starts -->
-     <main>
-
-
-     <!-- home-page banner -->
-     <div class="home-banner">
-
-       <img src="images/agescape-home-page-banner.jpg" alt="banner">
-       
-            
-
-            <!-- hame-page banner text/button  -->
-       
-            <div class="home-banner-text-button">
-       
-             <h3>explore the journey of 
-                <br />
-          
-              <span> humanity </span>
-             </h3>
-       
-             <p>explore the echoes of time</p>
-
-
-             <!-- banner button -->
-             <div class="banner-button">
-
-               <div class="audio-tip">
-                  🔼
-                  <br />
-                  try background sound
-               </div>
-
-               <button class="audio-btn">
-                  
-                  <span class="material-symbols-outlined">
-                  volume_up
-                  </span>
-
-
-                  <span class="slash">\</span>
-
-               </button>
-
-               <audio src="Arabian Nights Instrumental but my favorite part is looped  Arabian Nights Desert Vibes version.mp3" id="bg-music" loop></audio>
-
-
-
-
-               <a href="#" class="start-btn">start exploring ➡</a>
-
-             </div>
-             <!-- banner button -->
-       
-
-       
-            </div>
-       
-            <!-- hame-page banner text/button  -->
-
-
-     </div>
-     <!-- home-page banner -->
-
-
-
-
-
-
-  
-     </main>
-     <!-- main ends  -->
-  
-
-
-
-
-
-
-
-
-
-
     <!-- gsap cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <!-- gsap cdn -->
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- gsap cdn -->
 
     <!-- gsap scrolltrigger cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- gsap scrolltrigger cdn -->
-
 
     <!-- lenis cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <!-- lenis cdn -->
 
-
-    <!-- js file -->
-       <script src="agescape.js"></script>
     <!-- js file -->
 
+    <script src="audio-logic-js/audio-map.js"></script>
 
+    <script src="audio-logic-js/bg-audio-engine.js"></script>
 
-</body>
+    <script src="audio-logic-js/story-audio-engine.js"></script>
+
+    <script src="agescape.js"></script>
+    <!-- js file -->
+  </body>
 </html>

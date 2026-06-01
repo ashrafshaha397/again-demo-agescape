@@ -1,0 +1,107 @@
+//   html player code start //
+
+
+        <!-- for story page -->
+
+      <button id="story-play-btn">play story</button>
+
+      <div class="story-progress-container">
+        <!-- current time -->
+
+        <span id="current-time"> 0:00 </span>
+
+        <!-- seekbar -->
+
+        <input type="range" id="story-seekbar" value="0" min="0" max="100" />
+
+        <!-- total duration -->
+
+        <span id="duration"> 0:00 </span>
+      </div>
+
+      <!-- next story btn  -->
+
+      <a href="story-2.html" target="_blank" id="next-story-btn">
+        Next Story ➡
+      </a>
+
+      <!-- next story btn  -->
+
+        <!-- for story page -->
+
+
+
+
+//   html player code end 
+
+
+
+
+
+//   css player code start //
+
+
+
+
+
+
+/* story page player start  */
+
+
+/* =========================
+   STORY PROGRESS PLAYER
+========================= */
+
+.story-progress-container {
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+
+  padding: 0.5rem;
+
+}
+
+
+
+/* time text */
+
+.story-progress-container span {
+
+  font-size: 0.8rem;
+
+  min-width: 35px;
+
+}
+
+
+
+
+
+/* seekbar */
+
+#story-seekbar {
+
+  width: 100%;
+
+  cursor: pointer;
+
+}
+
+
+/* =========================
+   STORY PROGRESS PLAYER
+========================= */
+
+
+
+/* story page player end  */
+
+
+
+
+
+
+//   css player code end //

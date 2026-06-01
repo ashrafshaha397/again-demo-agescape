@@ -41,6 +41,13 @@ html.lenis, html.lenis body {
   }
 
 
+
+  html {
+    scroll-padding-top: 3rem;
+  }
+
+
+
   body {
     width: 100%;
     line-height: 1.7;
@@ -63,6 +70,47 @@ html.lenis, html.lenis body {
   --text-color-2:  linear-gradient( 135deg, #ff9a00, #ffd700, #fff0b3, #ff9a00);
   --text-color-3:  rgb(27, 27, 27);
 }
+
+
+
+
+
+
+/* overlay for audio permission */
+
+#audioOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+ }
+
+
+
+ #enterBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem;
+  background: var(--text-color-2);
+  transform: translateY(-20vh);
+}
+
+/* overlay for audio permission */
+
+
 
 
 
@@ -194,65 +242,6 @@ header .top-bar .logo-and-name h3 {
 
 
 
-/* label for search-bar */
-
-
-header .top-bar label {
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  padding: 0.3rem;
-  border-radius: 0.7rem;
-}
-
-header .top-bar label .fa-searchengin {
-  color: var(--text-color-1);
-  font-size: 1.3rem;
-  transition: 0.3s;
-}
-
-
-
-header .top-bar label .fa-searchengin:hover {
-  background: var(--text-color-2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* label for search-bar */
-
-
-
-
-
-/* search input */
-
-header #search-input {
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-  border: none;
-  width: 70%;
-  color: var(--text-color-2);
-  font-size: 1.1rem;
-  align-items: center;
-  border: none;
-  background: rgba(0, 0, 0, 0.2);
-  display: none;
-  overflow: hidden;
-}
-
-
-
-
-header #search-input.active {
-  display: block;
-}
-
-/* search input */
-
-
-
 
 
 
@@ -337,12 +326,13 @@ nav .sidebar li {
 nav .sidebar a{
   display: block;
   width: 100%;
-  color: var(--text-color-1);
+  color: var(--text-color-3);
   text-decoration: none;
   text-transform: capitalize;
   padding: 0.5em 1em;
   border-radius: 0.5rem;
   /* border: 1px solid var(--text-color-2); */
+  background: rgba(255, 255, 255, 0.3);
   text-align: center;
   font-size: 0.9em;
   font-family: var(--text-font);
@@ -400,6 +390,23 @@ backdrop-filter: blur(2px);
 
  /* nav */
 
+
+ 
+   header .audio-btn {
+     color: var(--text-color-3);
+     border: none;
+     padding: 0.2rem;
+     border-radius: 0.5rem;
+     background: rgba(255, 255, 255, 0.9);
+     text-transform: capitalize;
+     align-items: center;
+     text-align: center;
+     font-size: 1.3rem;
+     transition: 0.5s;
+     display: block;
+     width: fit-content;
+   }
+
  
  
 
@@ -407,7 +414,7 @@ backdrop-filter: blur(2px);
 
 
 
-/* header ends */
+/* header ends */ 
 
 
 
@@ -424,8 +431,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
+}  
 
 
 
@@ -519,21 +525,8 @@ main .home-banner img {
 
 
 
-  main .home-banner .home-banner-text-button .banner-button button {
-    color: var(--text-color-3);
-    border: none;
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-    background: var(--text-color-1);
-    text-transform: capitalize;
-    align-items: center;
-    text-align: center;
-    font-size: 0.8rem;
-    transition: 0.5s;
-  }
 
-
-  main .home-banner .home-banner-text-button .banner-button button:hover {
+  main  button:hover {
     background: var(--text-color-2);
   }
 
@@ -568,102 +561,339 @@ main .home-banner img {
 
 
 
+/* =========================
+   AUDIO BUTTON ICONS
+========================= */
 
 
 
-/* home main banner text and button */
+/* Mute icon hidden by default */
 
-
-
-
-
-
-
-
-/* sound loop button  */
-
-
-
-.audio-tip{
-  position: absolute;
-  top: 4rem;
-  left: -3.5rem;
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-
-  background: rgba(0,0,0,0.3);
-  color: var(--text-color-1);
-  white-space: nowrap;
-  
-
-  opacity: 0;
-  pointer-events: none;
-
-  transform: translateY(10px);
-  transition: 0.4s ease;
-}
-
-.audio-tip.show{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.audio-btn{
-  position: relative;
-  cursor: pointer;
-}
-
-.audio-btn span{
-  font-size: 30px;
-}
-
-
-
-
-
-
-.slash{
-
-  position: absolute;
-
-  top: 0.3rem;
-  left: 0.9rem;
-
-  font-size: 1.3rem;
-  font-weight: bold;
-
-  color: var(--text-color-3);
-
+.bi-volume-mute {
   display: none;
+}  
 
-  transform: rotate(-20deg);
-
-  pointer-events: none;
-}
-
-
-
-
-
-
-/* sound loop button */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Mute icon hidden by default */
 
 /* home main banner ends */
+
+
+
+/* featured stories start */
+
+   /* featured stories headline start  */
+
+        main #featured-headline {
+          font-size: 1.2rem;
+          font-family: var(--font-2);
+          align-items: center;
+          text-align: center;
+          padding: 2rem 0rem;
+          text-transform: capitalize;
+          color: var(--text-color-1);
+        }
+
+  /* featured stories headline end  */
+
+
+
+
+main .featured-stories {
+  display: flex;
+  flex-direction: row;
+  padding: 0.7rem;
+
+  overflow-x: auto;
+  gap: 1rem;
+
+  width: 100%;
+}
+
+
+
+main .featured-stories .featured-cards {
+  display: flex;
+  flex: 0 0 75%;
+  border-radius: 0.9rem;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text-color-1);
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+
+main .featured-stories .featured-cards img {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+
+/* 
+main .featured-stories .featured-cards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2), transparent);
+  z-index: 1;
+}
+ */
+
+
+
+
+ main .featured-stories .featured-cards h3 {
+  font-size: 1rem;
+  font-family: var(--font-2);
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0.3rem 0.1rem;
+ } 
+
+
+
+
+main .featured-stories .featured-cards p {
+  font-size: 0.8rem;
+  font-family: var(--font-2);
+  text-transform: capitalize;
+  padding: 0.3rem 0.1rem;
+}
+
+
+
+
+/* featured stories end */
+
+
+
+
+/* label for search-bar */
+
+main .parent-search-container {
+  padding: 0.3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+
+
+main .parent-search-container #search-headline {
+          font-size: 1.2rem;
+          font-family: var(--font-2);
+          align-items: center;
+          text-align: center;
+          padding: 2rem 0rem 0.2rem 0rem;
+          text-transform: capitalize;
+          color: var(--text-color-1);
+}
+
+
+main .parent-search-container .search-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+
+
+main .parent-search-container .search-container .search-btn {
+  background: rgba(255, 255, 255, 0.3); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+}
+
+main .parent-search-container .search-container .search-btn .bi-search {
+  color: var(--text-color-1);
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: 0.3s;
+  align-items: center;
+}
+
+
+
+main .parent-search-container .search-container .search-btn .bi-search:hover {
+  background: var(--text-color-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* label for search-bar */
+
+
+/* search input */
+
+main .parent-search-container .search-container #search-input {
+  padding: 0.3rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+  width: 80%;
+  color: var(--text-color-1);
+  align-items: center;
+  border: none;
+  background: rgba(255, 255, 255, 0.3); 
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: var(--font-2);
+}
+
+/* search input */
+
+
+/* search result start */
+
+main .parent-search-container  .search-result {
+  width: 95%;
+  padding: 0.3rem;
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* search result start */
+
+
+
+
+
+
+
+
+/*  categories section start */
+
+
+
+main .categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+}
+
+
+
+
+
+/* categories headline start */
+
+main .categories #categories-headline {
+  font-size: 1.2rem;
+  font-family: var(--font-2);
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0rem 0.5rem 0rem;
+  text-transform: capitalize;
+  color: var(--text-color-1);
+}
+
+/* categories headline end */
+
+
+
+
+main .categories .categories-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.9rem;
+  width: 100%;
+  max-height: 9em;
+  text-decoration: none;
+  color: var(--text-color-1);
+  overflow: hidden;
+  box-sizing: border-box;
+  align-items: center;
+  text-wrap: wrap;
+  gap: 1rem;
+  background: transparent;
+}
+
+
+
+
+
+
+main .categories .categories-card .categories-img-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+
+main .categories .categories-card .categories-img-wrapper::after {
+  width: 100%;
+ background: linear-gradient(to right, transparent, rgba(0, 0, 0, 1));
+
+
+ content: "";
+ position: absolute;
+ inset: 0;
+ z-index: 1;
+}
+
+
+
+
+main .categories .categories-card .categories-img-wrapper img {
+  box-sizing: border-box;
+  object-fit: cover;
+  width: 100%;
+  align-items: center;
+}
+
+
+
+
+main .categories .categories-card h3 {
+  font-size: 1.3rem;
+  font-family: var(--font-2);
+  -webkit-background-clip: text;
+  background: var(--text-color-2);
+  background-clip: text;
+  color: transparent;
+  position: absolute;
+  padding:  1.5rem;
+  right: 0rem;
+  z-index: 50;
+}
+
+
+/* categories section end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -671,3 +901,15 @@ main .home-banner img {
 
 
 /* main ends  */
+
+
+
+
+
+
+
+
+
+
+
+
