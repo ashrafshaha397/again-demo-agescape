@@ -4,9 +4,9 @@
 const audioMap = {
 
   home: {
-    bg:"audio-content/bg-sound/Arabian-Nights-Instrumental-but-my-favorite-part-is-looped-Arabian-Nights-Desert-Vibes-version.mp3",
+    bg:"/01-FRONTEND-HQ/03-major-Projects/Agescape/assets-img-audio/[1]-Home-page-img-audio/Arabian-Nights-Instrumental-but-my-favorite-part-is-looped-Arabian-Nights-Desert-Vibes-version.mp3",
 
-    story:"audio-content/stories-audio/nature-sound-near-river-or-waterfall-247409.mp3"
+    story:""
   }
 
 };
