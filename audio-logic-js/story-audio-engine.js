@@ -85,16 +85,17 @@ audioMap[currentPage];
 
 
 
-
 /* =========================
    SAFETY CHECK
 ========================= */
 
+// Agar page audio data
+// ya story audio missing hai
 
-
-// Agar audio missing hai
-
-if (!currentAudio) {
+if (
+  !currentAudio ||
+  !currentAudio.story
+) {
 
   console.log(
     "No story audio found"
@@ -112,14 +113,11 @@ if (!currentAudio) {
    STORY AUDIO SOURCE
 ========================= */
 
-
-
 // Story audio source
 
 storyMusic.src =
 
 currentAudio.story;
-
 
 
 

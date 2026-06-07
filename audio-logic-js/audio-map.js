@@ -3,11 +3,22 @@
 
 const audioMap = {
 
-  home: {
-    bg:"/01-FRONTEND-HQ/03-major-Projects/Agescape/assets-img-audio/[1]-Home-page-img-audio/Arabian-Nights-Instrumental-but-my-favorite-part-is-looped-Arabian-Nights-Desert-Vibes-version.mp3",
+  // home bg start
 
-    story:""
+  home: {
+    bg:"assets-img-audio/Home-page-img-audio/Arabian-Nights-Instrumental-but-my-favorite-part-is-looped-Arabian-Nights-Desert-Vibes-version.mp3",
+
+    // story:""
   }
+  // home bg start
+
+
+
+  // wonders start 
+
+
+
+  // wonders ends
 
 };
 
