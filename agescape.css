@@ -599,12 +599,30 @@ backdrop-filter: blur(2px);
 
  
  
+   
+   /* =========================
+      AUDIO BUTTON ICONS
+   ========================= */
+   
+   
+   
+   /* Mute icon hidden by default */
+   
+   .bi-volume-mute {
+     display: none;
+   }  
+   
+   /* Mute icon hidden by default */
+   
+   /* home main banner ends */
+   
 
 
 
 
 
-/* header ends */ 
+
+/* header ends */    
 
 
 
@@ -621,7 +639,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}  
+}    
 
 
 
@@ -635,7 +653,7 @@ main .home-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+}  
 
 
 
@@ -645,7 +663,7 @@ main .home-banner::before {
   inset: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2), transparent);
   z-index: 1;
-}
+}  
 
 
 
@@ -655,7 +673,7 @@ main .home-banner img {
   object-fit: cover;
   display: block;
   filter: contrast(1.1) saturate(1.1) brightness(0.9);
-}
+}  
 
 
 
@@ -672,7 +690,7 @@ main .home-banner img {
     width: 100%;
     height: 100%;
     z-index: 2;
-  }
+  }  
 
 
 
@@ -684,13 +702,13 @@ main .home-banner img {
     background-clip: text;
     color: transparent;
     text-transform: capitalize;
-  }
+  }  
 
 
   main .home-banner .home-banner-text-button h3 span {
     font-size: 1.9rem;
     font-weight: 700;
-  }
+  }  
 
 
 
@@ -698,7 +716,7 @@ main .home-banner img {
     font-size: 1rem;
     font-family: var(--font-2);
     text-transform: capitalize;
-  }
+  }  
 
 
 
@@ -711,14 +729,14 @@ main .home-banner img {
     align-items: center;
     padding: 0.3rem;
     gap: 0.7rem;
-  }
+  }  
 
 
 
 
   main  button:hover {
     background: var(--text-color-2);
-  }
+  }  
 
 
 
@@ -736,7 +754,7 @@ main .home-banner img {
     font-size: 0.8rem;
     border-radius: 0.5rem;
     transition: 0.2s;
-  }
+  }  
 
 
 
@@ -745,29 +763,11 @@ main .home-banner img {
   
   main .home-banner .home-banner-text-button .banner-button .start-btn:hover {
     scale: 1.1;
-  }
+  }  
 
   /* home start button / banner button */
 
-
-
-/* =========================
-   AUDIO BUTTON ICONS
-========================= */
-
-
-
-/* Mute icon hidden by default */
-
-.bi-volume-mute {
-  display: none;
-}  
-
-/* Mute icon hidden by default */
-
-/* home main banner ends */
-
-
+  
 
 
 

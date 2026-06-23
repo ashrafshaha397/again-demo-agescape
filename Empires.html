@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throne of Empires</title>
+
+      <!-- favicon -->
+
+      <link
+      rel="shortcut icon"
+      href="assets-img-audio/Home-page-img-audio/agescape-logo_new-for-favicon.webp"
+      type="image/x-icon"/>
+
+    <!-- favicon -->
+
+
+    <!-- google fonts -->
+
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=MedievalSharp&display=swap"
+       rel="stylesheet"/>
+ 
+    <!-- google fonts -->
+
+
+    <!-- bootstrap icon cdn -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+
+    <!-- bootstrap icon cdn -->
+
+
+    <!-- inline css start -->
+
+
+    <style>
+    
+   /* Lenis Smooth Scroll Core Style */
+
+   html.lenis, html.lenis body {
+       height: auto;
+     }
+     
+     .lenis.lenis-smooth {
+       scroll-behavior: auto !important;
+     }
+     
+     .lenis.lenis-smooth [data-lenis-prevent] {
+       overscroll-behavior: contain;
+     }
+     
+     .lenis.lenis-stopped {
+       overflow: hidden;
+     }
+     
+     .lenis.lenis-scrolling iframe {
+       pointer-events: none;
+     }
+   
+   
+     /* prevent default scroll behavior clash with lenis */
+   
+   
+     /* done lenis */
+   
+   
+   
+     /* main body styling */
+   
+   
+   
+   
+     * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+     }
+   
+   
+   
+     html {
+       scroll-padding-top: 3rem;
+     }
+   
+   
+   
+     body {
+       width: 100%;
+       line-height: 1.7;
+       overflow-x: hidden;
+       background: var(--bg-color);
+       color: var(--text-color-1);
+       font-family: var(--font-3);
+     }
+     
+   
+   
+   
+   :root {
+     --bg-color: linear-gradient(to right,  #000000, #000000);
+     --font-1: "MedievalSharp", cursive;
+     --font-2: "Eagle Lake", serif;
+     --font-3:  monospace;
+     --text-color-1: rgb(231, 231, 231);
+     /* --text-color-2:  rgb(207, 163, 80); */
+     --text-color-2:  linear-gradient( 135deg, #ff9a00, #ffd700, #fff0b3, #ff9a00);
+     --text-color-3:  rgb(27, 27, 27);
+   }
+   
+   
+   
+   
+   
+   
+   /* overlay for audio permission */
+   
+   #audioOverlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0, 0, 0, 0.30);
+     backdrop-filter: blur(3px);
+   
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 9999;
+     width: 100vw;
+     height: 100vh;
+     cursor: pointer;
+    }
+   
+   
+   
+    #enterBtn {
+     border: none;
+     cursor: pointer;
+     border-radius: 0.7rem;
+     font-family: var(--font-2);
+     font-weight: 700;
+     font-size: 1rem;
+     text-transform: capitalize;
+     padding: 0.5rem;
+     background: var(--text-color-2);
+     transform: translateY(-20vh);
+   }
+   
+   /* overlay for audio permission */
+   
+   
+   
+   
+   
+   
+   
+   
+   /* footer starts */
+   
+   footer {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     gap: 2.5rem;
+     padding: 0.3rem;
+     width: 100%;
+   }
+   
+   
+   
+   footer #footer-contact {
+     text-transform: capitalize;
+     align-items: center;
+     font-size: 1.2rem;
+     font-family: var(--font-2);
+     -webkit-background-clip: text;
+     background: var(--text-color-2);
+     background-clip: text;
+     color: transparent;
+   }
+   
+   
+   
+   
+   
+   footer .explore-footer {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     padding: 0.3rem;
+     gap: 0.5rem;
+     justify-content: center;
+   }
+   
+   
+   
+   footer .explore-footer a {
+     text-decoration: none;
+     display: block;
+     padding: 0.5rem;
+     text-transform: capitalize;
+     align-items: center;
+     font-size: 0.9rem;
+     /* font-family: var(--font-2);
+     -webkit-background-clip: text;
+     background: var(--text-color-2);
+     background-clip: text;
+     color: transparent; */
+     color: var(--text-color-3);
+     font-family: var(--font-2);
+     background: rgba(255, 255, 255, 0.7);
+     border-radius: 0.3rem;
+     transition: 0.3s;
+   }
+   
+   
+   
+   footer .explore-footer a:hover {
+     background: var(--text-color-2);
+   }
+   
+   
+   
+   
+   
+   footer .logo-links-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 0.7rem;
+     padding: 0.2rem;
+     text-align: center;
+     text-transform: capitalize;
+   }
+   
+   
+   
+   
+   footer .logo-links-container img {
+     width: 4rem;
+     height: 100%;
+     object-fit: cover;
+     align-items: center;
+     box-sizing: border-box;
+   }
+   
+   
+   
+   
+   footer .logo-links-container h3 {
+     text-transform: capitalize;
+     align-items: center;
+     font-size: 1.3rem;
+     font-family: var(--font-2);
+     -webkit-background-clip: text;
+     background: var(--text-color-2);
+     background-clip: text;
+     color: transparent;
+   }
+   
+   
+   
+   
+   
+   footer .logo-links-container p {
+     text-transform: capitalize;
+     align-items: center;
+     font-size: 0.8rem;
+     font-family: var(--font-2);
+     -webkit-background-clip: text;
+     background: var(--text-color-2);
+     background-clip: text;
+     color: transparent;
+   }
+   
+   
+   
+   
+   
+   footer .logo-links-container .link-container {
+     align-items: center;
+     display: flex;
+     flex-direction: row;
+     padding: 0.2rem;
+     gap: 2rem;
+     justify-content: center;
+   }
+   
+   
+   
+   
+   footer .logo-links-container .link-container a {
+     text-decoration: none;
+     align-items: center;
+     text-transform: capitalize;
+     align-items: center;
+     font-size: 1.3rem;
+     font-family: var(--font-2);
+     -webkit-background-clip: text;
+     background: var(--text-color-2);
+     background-clip: text;
+     color: transparent;
+     display: block;
+     padding: 0.2rem;
+   }
+   
+   
+   
+   footer .logo-links-container #copy-right-line {
+     font-size: 1rem;
+     padding: 1rem 0rem;
+   }
+   
+   
+   /* footer ends */
+
+
+
+
+   
+
+/* header starts */
+
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 0.5rem 0.7rem ;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  z-index: 103;
+  backdrop-filter: brightness(0.7);
+}
+
+
+
+
+
+
+
+
+header .top-bar {
+  width: 100%;
+  z-index: 105;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+/* sidebar icon hamburger */
+
+header .top-bar .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 17px;
+  cursor: pointer;
+  z-index: 105;
+}
+
+
+
+
+header .top-bar .hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--text-color-1);
+  border-radius: 0.5em;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+/* sidebar icon hamburger */
+
+
+
+
+
+  /* hamburger animation */
+
+  header .top-bar .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background: var(--text-color-2);
+  }
+
+
+  header .top-bar .hamburger.active span:nth-child(2) {
+    /* opacity: 0; */
+    transform: translateX(-50px);
+    background: var(--text-color-2);
+  }
+
+
+  header .top-bar .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background: var(--text-color-2);
+  }
+
+  /* hamburger animation */
+
+
+
+
+
+
+  /* desktop sidebar block for mobile */
+
+
+  header .top-bar .desk-sidebar {
+    display: none;
+  }
+
+  /* desktop sidebar block for mobile */
+
+
+
+
+
+
+
+
+
+/* logo and headline name */
+
+header .top-bar .logo-and-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+
+header .top-bar .logo-and-name img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+header .top-bar .logo-and-name h3 {
+  font-family: var(--font-2);
+  background: var(--text-color-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.3rem;
+}
+
+/* logo and headline name */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* active state */
+
+nav .sidebar.active{
+  left: 2%;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+nav .overlay.active{
+  opacity:1;
+  pointer-events:auto;
+  }
+
+/* active state */
+
+
+
+
+
+ /* nav */
+
+
+/* sidebar */
+
+nav {
+  display: block;
+  padding: 0.5em 0 0 0;
+}
+
+
+
+
+nav .sidebar {
+  position: fixed;
+  left: 2%;
+  top: 5.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  align-items: center;
+  padding: 0.5em;
+  opacity: 0;
+  min-width: 130px;
+  width: fit-content;
+  border: 1px solid var(--text-color-2);
+  transition: 0.3s;
+  z-index: 103;
+  transform: translateX(-30px);
+  border-radius: 0.5em;
+  list-style-type: none;
+  pointer-events: none;
+}
+
+
+
+
+nav .sidebar li {
+  width: 100%;
+  align-items: center;
+}
+
+
+
+
+
+
+nav .sidebar a{
+  display: block;
+  width: 100%;
+  color: var(--text-color-3);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  /* border: 1px solid var(--text-color-2); */
+  background: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-size: 0.9em;
+  font-family: var(--text-font);
+  rotate: -10deg;
+  transition: 0.3s;
+  font-family: var(--font-2);
+  }
+
+  
+  
+  
+  nav .sidebar a:hover {
+  transition: 0.3s;
+  background: var(--text-color-2);
+  color: var(--text-color-3);
+  rotate: 0deg;
+}
+
+
+
+
+nav .sidebar .home-nav-link {
+  background: var(--text-color-2);
+  color: var(--text-color-3);
+  /* rotate: 0deg; */
+}
+
+
+
+
+
+/* sidebar */
+
+
+/* overlay */
+
+nav .overlay{
+display: block;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+opacity:0;
+pointer-events:none;
+transition: 0.3s;
+z-index: 102;
+background:rgba(0,0,0,0.1);
+backdrop-filter: blur(2px);
+}
+
+/* overlay */
+
+
+
+ /* nav */
+
+
+ 
+   header .audio-btn {
+     color: var(--text-color-3);
+     border: none;
+     padding: 0.2rem;
+     border-radius: 0.5rem;
+     background: rgba(255, 255, 255, 0.9);
+     text-transform: capitalize;
+     align-items: center;
+     text-align: center;
+     font-size: 1.3rem;
+     transition: 0.5s;
+     display: block;
+     width: fit-content;
+   }
+
+
+
+
+
+   
+/* =========================
+   AUDIO BUTTON ICONS
+========================= */
+
+
+
+/* Mute icon hidden by default */
+
+.bi-volume-mute {
+  display: none;
+}  
+
+/* Mute icon hidden by default */
+
+/* home main banner ends */
+
+
+
+
+
+
+
+
+/* header ends */ 
+
+
+
+
+
+
+
+ /* main start  */
+
+
+ main {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+ }
+
+
+
+ main .bg-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+ }
+
+
+
+ 
+
+main .bg-img-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4), transparent);
+  z-index: 1;
+}  
+
+
+
+
+ main .bg-img-container img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  filter: blur(1px);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ /* main end */
+
+
+
+   
+   
+   
+   </style>
+
+    <!-- inline css ends  -->
+
+
+</head>
+<body>
+
+
+    
+  
+      <!-- header start -->
+  
+      <header>
+  
+  
+        <div class="top-bar">
+          <!-- mobile responsive hamburger for nav start -->
+  
+          <div class="hamburger" id="hamburger">
+            <span id="span-1"></span>
+            <span id="span-2"></span>
+            <span id="span-3"></span>
+          </div>
+  
+          <!-- mobile responsive hamburger for nav start -->
+  
+          
+          
+          
+          
+          <!-- logo and name  -->
+          <div class="logo-and-name">
+            <img src="assets-img-audio/Home-page-img-audio/agescape-logo_new-for-favicon.webp" alt="image is not load" />
+            
+            <h3>AgeScape</h3>
+          </div>
+          
+          <!-- logo and name  -->
+          
+          
+          
+                  <!-- desktop sidelinks start -->
+          
+                  <div class="desk-sidebar">
+          
+                    
+                    <a href="#hamburger" class="home-desk-link">home</a>
+                    <a href="#featured-headline">features</a>
+                    <a href="#categories-headline">portals</a>
+            
+                    <a href="#about-headline">about</a>
+                    <a href="#footer-contact">contact</a>
+          
+                  </div>
+          
+                  <!-- desktop sidelinks ends -->
+          
+          
+          
+          <!-- bg audio on/off btn -->
+          <button class="audio-btn">
+            <i class="bi bi-volume-up"></i>
+            
+            <i class="bi bi-volume-mute slash"></i>
+          </button>
+          <!-- bg audio on/off btn -->
+        </div> 
+          
+      </header>
+  
+      <!-- header ends -->
+  
+  
+  
+  
+      <!-- nav start -->
+  
+      <nav>
+  
+  
+        <!-- class="sidebar" id="sidebar" -->
+  
+        <ul class="sidebar" id="sidebar">
+          <li><a href="#hamburger" class="home-nav-link">home</a></li>
+          <li><a href="#featured-headline" class="timeline-nav-link">features</a></li>
+  
+          <li>
+            <a href="#categories-headline" class="civilizations-nav-link">portals</a></li>
+  
+          <li><a href="#about-headline" class="stories-nav-link">about</a></li>
+          <li><a href="#footer-contact" class="about-nav-link">contact</a></li>
+        </ul>
+  
+  
+        <!-- overlay -->
+        <div class="overlay" id="overlay"></div>
+        <!-- overlay -->
+  
+  
+        <!-- mobile responsive hamburger nav ends-->
+  
+      </nav>
+  
+      <!-- nav ends -->
+  
+  
+
+
+
+
+
+
+      <!-- main start -->
+
+
+      <main>
+
+
+        <!-- bg img  -->
+
+        <div class="bg-img-container">
+
+          <img src="assets-img-audio/empires/empires-banner-img.webp" alt="">
+
+        </div>
+
+        <!-- bg img  -->
+        
+
+
+
+
+
+
+      </main>
+
+
+      <!-- main end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+    <!-- footer start -->
+
+
+    <footer>
+
+      <h3 id="footer-contact">explore</h3>
+
+      
+      <div class="explore-footer">
+
+
+        <a href="#hamburger">home</a>
+        <a href="#featured-headline">features</a>
+        <a href="#categories-headline">portals</a>
+
+        <a href="#about-headline">about</a>
+        <a href="#footer-contact">contact</a>
+
+
+      </div>
+
+
+
+      <div class="logo-links-container">
+
+        <img src="assets-img-audio/Home-page-img-audio/agescape-logo_new-for-favicon.webp" alt="">
+
+        <h3>AgeScape</h3>
+
+        <p>Explore the rise of empires, the legacy of rulers, the marvel of wonders and the mysteries of history.</p>
+
+
+
+        <div class="link-container">
+
+          <a href="https://www.instagram.com/ashraf_shaha_007?igsh=ZHlyYWVzd25wOGVv">
+            <i class="bi bi-instagram"></i>
+          </a>
+          
+        
+          <a href="https://wa.me/919762554425" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          
+        
+          
+          <a href="mailto:ashrafshaha397@gmail.com">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+
+
+        </div>
+
+        <h3 id="copy-right-line">&copy; 2026 AGESCAPE. <br />
+            all rights reserved.
+        </h3>
+
+
+
+      </div>
+
+
+
+    </footer>
+
+
+    <!-- footer end -->
+
+
+
+
+      
+    
+    <!-- gsap cdn -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!-- gsap cdn -->
+
+  <!-- gsap scrolltrigger cdn -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+    integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!-- gsap scrolltrigger cdn -->
+
+  <!-- lenis cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- lenis cdn -->
+
+  <!-- js file -->
+
+  <script src="audio-logic-js/audio-map.js"></script>
+
+  <script src="audio-logic-js/bg-audio-engine.js"></script>
+
+  <script src="audio-logic-js/story-audio-engine.js"></script>
+
+  <script src="agescape.js"></script>
+
+  <!-- js file -->
+
+    
+</body>
+</html>

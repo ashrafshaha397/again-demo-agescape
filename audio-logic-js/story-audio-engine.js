@@ -290,7 +290,7 @@ if (storyPlayBtn) {
 
           storyPlayBtn.innerText =
 
-          "pause story";
+          '<i class="bi bi-pause-fill"></i>';
 
 
 
@@ -376,7 +376,7 @@ if (storyPlayBtn) {
 
         storyPlayBtn.innerText =
 
-        "play story";
+        '<i class="bi bi-play-fill"></i>';
 
       }
 
@@ -562,7 +562,7 @@ storyMusic.addEventListener(
 
       storyPlayBtn.innerText =
 
-      "play story";
+      '<i class="bi bi-play-fill"></i>';
 
     }
 
@@ -743,15 +743,11 @@ function () {
 
     storyPlayBtn.innerText =
 
-    "play story";
+    '<i class="bi bi-play-fill"></i>';
 
   }
 
 };
-
-
-
-
 
 
 
