@@ -465,8 +465,8 @@ display: none;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    min-height: 29vh;
-    height: 30vh;
+    min-height: 33vh;
+    height: 33vh;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -528,7 +528,7 @@ main .bg-img-wrapper::before {
 
 main {
     width: 100%;
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
 }
@@ -546,7 +546,7 @@ main .player-container {
     height: 70vh;
     background: var(--bg-color);
     position: fixed;
-    top: 29vh;
+    top: 30vh;
     border-radius: 0.9rem;
     border-top: 1px solid rgb(117, 117, 117);
     z-index: 9;
@@ -560,7 +560,7 @@ main .player-container .story-txt-box {
     align-items: center;
     padding: 0.3rem 1rem;
     width: 100%;
-    height: 75%;
+    height: 77%;
     text-wrap: wrap;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -631,7 +631,7 @@ main .player-container .controlls-extra #story-play-btn {
 
 
 main .player-container .controlls-extra #story-play-btn .bi {
-    font-size: 2rem;
+    font-size: 1.9rem;
     -webkit-background-clip: text;
     background: var(--text-color-2);
     background-clip: text;
@@ -685,7 +685,7 @@ main .player-container .controlls-extra .story-progress-container span {
 
   #story-btn {
     text-decoration: none;
-    align-items: center;
+    
   }
 
   #story-btn .bi {
@@ -693,7 +693,7 @@ main .player-container .controlls-extra .story-progress-container span {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   
