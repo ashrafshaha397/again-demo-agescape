@@ -526,9 +526,11 @@ nav .sidebar a{
   text-align: center;
   font-size: 0.9em;
   font-family: var(--text-font);
-  rotate: -10deg;
+  rotate: -7deg;
   transition: 0.3s;
   font-family: var(--font-2);
+  border-top: 3px solid snow;
+  border-right: 3px solid snow;
   }
 
   

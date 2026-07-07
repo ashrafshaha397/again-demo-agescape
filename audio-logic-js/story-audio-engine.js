@@ -1,5 +1,7 @@
 
 
+
+
 /* =========================
    AGESCAPE STORY AUDIO ENGINE
    FINAL CLEAN CINEMATIC VERSION
@@ -184,7 +186,7 @@ function lowerBGVolume() {
   if (window.bgMusic) {
 
     window.bgMusic.volume =
-    0.4;
+    0.3;
 
   }
 
@@ -202,7 +204,7 @@ function restoreBGVolume() {
   if (window.bgMusic) {
 
     window.bgMusic.volume =
-    0.9;
+    0.8;
 
   }
 
@@ -288,7 +290,7 @@ if (storyPlayBtn) {
 
           // Update button text
 
-          storyPlayBtn.innerText =
+          storyPlayBtn.innerHTML =
 
           '<i class="bi bi-pause-fill"></i>';
 
@@ -374,7 +376,7 @@ if (storyPlayBtn) {
 
         // Update button text
 
-        storyPlayBtn.innerText =
+        storyPlayBtn.innerHTML =
 
         '<i class="bi bi-play-fill"></i>';
 
@@ -527,6 +529,417 @@ if (seekbar) {
 
 
 
+/* =========================
+   10 SECOND SKIP CONTROLS
+========================= */
+
+// Back Button
+const storyBackBtn =
+document.getElementById("story-back-btn");
+
+// Forward Button
+const storyForwardBtn =
+document.getElementById("story-forward-btn");
+
+
+// 10 Seconds Back
+if (storyBackBtn) {
+
+  storyBackBtn.addEventListener(
+    "click",
+    () => {
+
+      storyMusic.currentTime = Math.max(
+        0,
+        storyMusic.currentTime - 10
+      );
+
+    }
+  );
+
+}
+
+
+// 10 Seconds Forward
+if (storyForwardBtn) {
+
+  storyForwardBtn.addEventListener(
+    "click",
+    () => {
+
+      storyMusic.currentTime = Math.min(
+        storyMusic.duration,
+        storyMusic.currentTime + 10
+      );
+
+    }
+  );
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   VOLUME CONTROL
+========================= */
+
+// Volume Slider
+
+const storyVolumeSlider =
+
+document.getElementById(
+  "story-volume-slider"
+);
+
+
+// Volume Button
+
+const storyVolumeBtn =
+
+document.getElementById(
+  "story-volume-btn"
+);
+
+
+
+
+
+// Safety Check
+
+if (
+
+  storyVolumeSlider &&
+
+  storyVolumeBtn
+
+) {
+
+
+
+
+
+  /* =========================
+     DEFAULT VOLUME
+  ========================= */
+
+  storyMusic.volume =
+
+  storyVolumeSlider.value / 100;
+
+
+
+
+
+
+  /* =========================
+     VOLUME SLIDER
+  ========================= */
+
+  storyVolumeSlider.addEventListener(
+
+    "input",
+
+    () => {
+
+
+
+
+
+      // Update volume
+
+      storyMusic.volume =
+
+      storyVolumeSlider.value / 100;
+
+
+
+
+
+
+      // Agar volume 0 hai
+
+      if (
+
+        storyVolumeSlider.value == 0
+
+      ) {
+
+        storyMusic.muted = true;
+
+        storyVolumeBtn.innerHTML =
+
+        '<i class="bi bi-volume-mute-fill"></i>';
+
+      }
+
+
+
+
+
+
+      // Agar volume 0 se upar hai
+
+      else {
+
+        storyMusic.muted = false;
+
+        storyVolumeBtn.innerHTML =
+
+        '<i class="bi bi-volume-up-fill"></i>';
+
+      }
+
+    }
+
+  );
+
+
+
+
+
+
+  /* =========================
+     MUTE / UNMUTE BUTTON
+  ========================= */
+
+  storyVolumeBtn.addEventListener(
+
+    "click",
+
+    () => {
+
+
+
+
+
+      // Agar muted hai
+
+      if (
+
+        storyMusic.muted
+
+      ) {
+
+
+
+
+
+        // Unmute
+
+        storyMusic.muted = false;
+
+
+
+
+
+
+        // Agar slider 0 par hai
+        // to default volume 100%
+
+        if (
+
+          storyVolumeSlider.value == 0
+
+        ) {
+
+          storyVolumeSlider.value = 100;
+
+          storyMusic.volume = 1;
+
+        }
+
+
+
+
+
+
+        // Change icon
+
+        storyVolumeBtn.innerHTML =
+
+         '<i class="bi bi-volume-up-fill"></i>';
+
+      }
+
+
+
+
+
+
+      // Agar muted nahi hai
+
+      else {
+
+
+
+
+
+        // Mute
+
+        storyMusic.muted = true;
+
+
+
+
+
+
+        // Change icon
+
+       storyVolumeBtn.innerHTML =
+
+          '<i class="bi bi-volume-mute-fill"></i>';
+
+      }
+
+    }
+
+  );
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   STORY SPEED CONTROL
+========================= */
+
+
+
+// Speed button
+
+const storySpeedBtn =
+
+document.getElementById(
+  "story-speed-btn"
+);
+
+
+
+
+
+// Available playback speeds
+
+const speedList = [
+
+  0.75,
+  1,
+  1.25,
+  1.5,
+  2
+
+];
+
+
+
+
+
+// Default speed index
+// 1 = 1x
+
+let speedIndex = 1;
+
+
+
+
+
+// Safety check
+
+if (storySpeedBtn) {
+
+
+
+
+  storySpeedBtn.addEventListener(
+
+    "click",
+
+    () => {
+
+
+
+
+
+      /* =========================
+         NEXT SPEED
+      ========================= */
+
+      speedIndex++;
+
+
+
+
+
+      // Last speed ke baad
+      // fir first speed
+
+      if (
+
+        speedIndex >=
+        speedList.length
+
+      ) {
+
+        speedIndex = 0;
+
+      }
+
+
+
+
+
+
+      /* =========================
+         APPLY SPEED
+      ========================= */
+
+      storyMusic.playbackRate =
+
+      speedList[speedIndex];
+
+
+
+
+
+
+      /* =========================
+         UPDATE BUTTON TEXT
+      ========================= */
+
+      storySpeedBtn.textContent =
+
+      speedList[speedIndex] + "x";
+
+    }
+
+  );
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -560,7 +973,7 @@ storyMusic.addEventListener(
 
     if (storyPlayBtn) {
 
-      storyPlayBtn.innerText =
+      storyPlayBtn.innerHTML  =
 
       '<i class="bi bi-play-fill"></i>';
 
@@ -741,7 +1154,7 @@ function () {
 
   if (storyPlayBtn) {
 
-    storyPlayBtn.innerText =
+    storyPlayBtn.innerHTML =
 
     '<i class="bi bi-play-fill"></i>';
 
@@ -755,3 +1168,11 @@ function () {
 
 }
 );
+
+
+
+
+
+
+
+
