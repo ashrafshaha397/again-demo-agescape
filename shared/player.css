@@ -598,7 +598,7 @@ main .hero h3 {
   font-family: var(--font-2);
   position: absolute;
   bottom: 3vh;
-  left: 3vh;
+  left: 3vw;
   background: var(--text-color-2);
   -webkit-background-clip: text;
   background-clip: text;
@@ -611,6 +611,24 @@ main .hero h3 {
 
 main .hero h3 span {
   font-size: 1.3rem;
+}
+
+
+
+
+
+main .hero #story-language-btn {
+  border: none;
+  position: absolute;
+  bottom: 3vh;
+  right: 3vw;
+  font-family: var(--font-2);
+  background: var(--text-color-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 
@@ -654,15 +672,25 @@ main .hero h3 span {
  }
 
 
- main .player-container .story-text .story-text-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.3rem;
-  list-style-type: decimal-leading-zero;
-  list-style-position: inside;
-  padding: 0.2rem 0rem;
+ main .player-container .story-text #english-story {
+  display: none;
  }
+
+ 
+ 
+ 
+ main .player-container .story-text .story-text-ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.3rem;
+   list-style-type: decimal-leading-zero;
+   list-style-position: inside;
+   padding: 0.2rem 0rem;
+  }
+  
+  
+
 
 
  main .player-container .story-text .story-text-ul li {
@@ -676,8 +704,8 @@ main .hero h3 span {
  main .player-container .story-text .story-text-ul li p {
   font-family: var(--font-2);
   font-size: 0.9rem;
-  line-height: 1.7;
-  word-spacing: 0.2rem;
+  line-height: 1.9;
+  word-spacing: 0.5rem;
   text-transform: capitalize;
  }
 
@@ -974,7 +1002,15 @@ main .hero h3 span {
   text-wrap: wrap;
   gap: 1rem;
   background: transparent;
+  transition: 0.3s;
   }
+
+
+  main .pc-sidebar-visible .pc-sidebar-link:hover {
+    max-height: 5.9em;
+  }
+
+
 
 
 

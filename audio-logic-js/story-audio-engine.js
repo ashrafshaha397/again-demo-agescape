@@ -186,7 +186,7 @@ function lowerBGVolume() {
   if (window.bgMusic) {
 
     window.bgMusic.volume =
-    0.3;
+    0.2;
 
   }
 
@@ -934,6 +934,162 @@ if (storySpeedBtn) {
 
 
 
+
+/* =========================
+   STORY LANGUAGE SWITCH
+========================= */
+
+// Language Button
+
+const storyLanguageBtn =
+document.getElementById(
+  "story-language-btn"
+);
+
+
+// English Story
+
+const englishStory =
+document.getElementById(
+  "english-story"
+);
+
+
+// Hindi Story
+
+const hindiStory =
+document.getElementById(
+  "hindi-story"
+);
+
+
+// Safety Check
+
+if (
+
+  storyLanguageBtn &&
+
+  englishStory &&
+
+  hindiStory
+
+) {
+
+
+  /* =========================
+     DEFAULT LANGUAGE
+  ========================= */
+
+  // Hindi Story Visible
+
+  hindiStory.style.display =
+  "block";
+
+
+  // English Story Hidden
+
+  englishStory.style.display =
+  "none";
+
+
+  // Button shows next language
+
+  storyLanguageBtn.textContent =
+  "Eng";
+
+
+  // Current Language
+
+  let currentLanguage =
+  "hindi";
+
+
+
+  /* =========================
+     LANGUAGE SWITCH BUTTON
+  ========================= */
+
+  storyLanguageBtn.addEventListener(
+
+    "click",
+
+    () => {
+
+
+      /* =========================
+         HINDI → ENGLISH
+      ========================= */
+
+      if (
+
+        currentLanguage ===
+        "hindi"
+
+      ) {
+
+        // Hide Hindi
+
+        hindiStory.style.display =
+        "none";
+
+
+        // Show English
+
+        englishStory.style.display =
+        "block";
+
+
+        // Button now shows Hindi
+
+        storyLanguageBtn.textContent =
+        "हिन्दी";
+
+
+        // Update Current Language
+
+        currentLanguage =
+        "english";
+
+      }
+
+
+
+      /* =========================
+         ENGLISH → HINDI
+      ========================= */
+
+      else {
+
+        // Hide English
+
+        englishStory.style.display =
+        "none";
+
+
+        // Show Hindi
+
+        hindiStory.style.display =
+        "block";
+
+
+        // Button now shows English
+
+        storyLanguageBtn.textContent =
+        "Eng";
+
+
+        // Update Current Language
+
+        currentLanguage =
+        "hindi";
+
+      }
+
+    }
+
+  );
+
+}
 
 
 

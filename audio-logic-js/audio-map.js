@@ -19,7 +19,7 @@ const audioMap = {
   tajMahal: {
     bg:"Arabian-Nights-Instrumental-but-my-favorite-part-is-looped-Arabian-Nights-Desert-Vibes-version.mp3"
 ,
-    story:"nature-sound-near-river-or-waterfall-247409.mp3"
+    story:"taj-mahal-phase1,2-murge.mp3"
   }
 
 
